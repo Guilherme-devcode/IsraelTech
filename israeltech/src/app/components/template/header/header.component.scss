@@ -1,0 +1,45 @@
+
+// Cores
+$white: #fff;
+$black: #000000;
+$purple: #725172;
+
+nav{
+    background: $white;
+    box-shadow: 0px 2px 6px #A8A8A829;
+}
+
+.logo{
+    width: 131px;
+    margin-left: 62px;
+}
+
+.nav-right{
+    ul{
+
+    }
+    li{
+        a{
+            position: relative;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            color: $black;
+            padding: 0 10px;
+        }
+        a:after{
+            content: "";
+            position: absolute;
+            background-color: $purple;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -20px;
+            transition: 0.25s;
+            border-radius: 10px;
+        }
+        a:hover:after{
+            width: 100%;
+        }
+    }
+}
