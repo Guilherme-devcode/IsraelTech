@@ -9,6 +9,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ForDirective } from './directives/for.directive';
 import { ProductsCreateComponent } from './components/product/products-create/products-create.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ProductsCreateComponent } from './components/product/products-create/pr
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

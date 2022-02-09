@@ -1,0 +1,21 @@
+.btn-create{
+    color: #FFFFFF;
+    background: #725172;
+    width: 84px;
+    height: 44px;
+    transition: 0.25s;
+}
+.btn-create:hover{
+    background: #533c53;
+}
+.btn:focus{
+    box-shadow: none;
+}
+
+.btn-cancel{
+    border: 1px solid #725172;
+    width: 84px;
+    height: 44px;
+    color: #725172;
+    margin-left: 20px;
+}
