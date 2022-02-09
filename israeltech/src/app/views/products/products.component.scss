@@ -1,0 +1,41 @@
+.products {
+    h1 {
+        font-size: 32px;
+        text-transform: capitalize;
+        margin-left: 50px;
+        margin-top: 20px;
+        color: #1F1F1F;
+        font-weight: bold;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 10px;
+        border: 1px solid #CCCCCC;
+        width: 1235px;
+        background: red;
+
+    }
+
+    .button-create {
+        background: red;
+        position: absolute;
+        right: 80px;
+        top: 0;
+        margin-top: 80px;
+        color: #FFFFFF;
+        border-radius: 6px;
+        background: #725172;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .button-create:hover {
+        background: #533c53;
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+}

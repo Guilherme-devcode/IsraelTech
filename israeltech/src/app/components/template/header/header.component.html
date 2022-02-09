@@ -11,17 +11,19 @@
             <div class="nav-right">
                 <ul class="navbar-nav nav-items">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Meus produtos</a>
+                        <a class="nav-link" routerLink="products" routerLinkActive="active-link">Meus produtos</a>
                     </li>
                 </ul>
             </div>
             <div class="nav-left collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link">
+                            <img class="profile" src="./assets/perfil.jpg" alt="perfil">
+                        </a>
                     </li>
                 </ul>
             </div>

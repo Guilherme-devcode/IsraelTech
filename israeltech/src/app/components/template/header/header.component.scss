@@ -9,19 +9,20 @@ $purple: #725172;
 nav{
     background: $white;
     box-shadow: 0px 2px 6px #A8A8A829;
+    height: 65px;
 }
 
 .logo{
     width: 131px;
-    margin-left: 62px;
+    margin-left: 45px;
 }
 
 .nav-right{
     li{
-        .nav-link.active{
+        .active-link{
             font-weight: bold;  
         }
-        .nav-link.active::after{
+        .active-link::after{
             content: "";
             position: absolute;
             background-color: $purple;
@@ -54,7 +55,13 @@ nav{
         a:hover:after{
             width: 100%;
         }
+
     }
+}
+.profile{
+    width: 56px;
+    border-radius: 15px;
+    border: 2px solid #725172;
 }
 
 // // Navbar fim
