@@ -5,7 +5,7 @@ import {Router} from '@angular/router'
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
 
@@ -20,5 +20,9 @@ export class ProductsComponent implements OnInit {
   navigateToProductCreate(): void{
     this.router.navigate(['./products/create'])
   }
+  createProduct():void{
+    this.productService.showMessage('Produto Criado!')
+  }
+
 
 }
