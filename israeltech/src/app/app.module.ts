@@ -11,6 +11,9 @@ import { ForDirective } from './directives/for.directive';
 import { ProductsCreateComponent } from './components/product/products-create/products-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ProductsFormDialogComponent } from './views/products-form-dialog/products-form-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FooterComponent,
     ProductsComponent,
     ForDirective,
-    ProductsCreateComponent
+    ProductsCreateComponent,
+    ProductsFormDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

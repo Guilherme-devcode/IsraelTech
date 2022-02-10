@@ -1,4 +1,3 @@
-
 // Cores
 $white: #fff;
 $black: #000000;
@@ -6,34 +5,36 @@ $purple: #725172;
 
 // Navbar inicio
 
-nav{
+nav {
     background: $white;
     box-shadow: 0px 2px 6px #A8A8A829;
-    height: 65px;
+    height: 56px;
 }
 
-.logo{
+.logo {
     width: 131px;
-    margin-left: 45px;
+    margin-left: 40px;
 }
 
-.nav-right{
-    li{
-        .active-link{
-            font-weight: bold;  
+.nav-left {
+    li {
+        .active-link {
+            font-weight: bold;
         }
-        .active-link::after{
+
+        .active-link::after {
             content: "";
             position: absolute;
             background-color: $purple;
             height: 3px;
             width: 100%;
             left: 0;
-            bottom: -20px;
+            bottom: -18px;
             transition: 0.25s;
             border-radius: 10px;
         }
-        a{
+
+        a {
             position: relative;
             margin-left: 20px;
             margin-right: 10px;
@@ -41,27 +42,55 @@ nav{
             color: $black;
             padding: 0 10px;
         }
-        a:after{
+
+        a:after {
             content: "";
             position: absolute;
             background-color: $purple;
             height: 3px;
             width: 0;
             left: 0;
-            bottom: -20px;
+            bottom: -18px;
             transition: 0.25s;
             border-radius: 10px;
         }
-        a:hover:after{
+
+        a:hover:after {
             width: 100%;
         }
 
     }
 }
-.profile{
-    width: 56px;
-    border-radius: 15px;
+
+.profile {
+    width: 36px;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 9px;
     border: 2px solid #725172;
+}
+
+.nav-right {
+    span {
+        text-align: left;
+        font-size: 16px;
+        color: #1f1f1f;
+        margin-right: 25px;
+
+    }
+    
+    span:after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 69.5rem;
+        width: 0;
+        height: 36px;
+        border: 1px solid #ccc;
+        cursor: default;
+
+    }
+
 }
 
 // // Navbar fim
