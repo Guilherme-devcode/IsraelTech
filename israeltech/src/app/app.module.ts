@@ -12,8 +12,10 @@ import { ProductsCreateComponent } from './components/product/products-create/pr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-import { ProductsFormDialogComponent } from './views/products-form-dialog/products-form-dialog.component';
-
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,18 @@ import { ProductsFormDialogComponent } from './views/products-form-dialog/produc
     ProductsComponent,
     ForDirective,
     ProductsCreateComponent,
-    ProductsFormDialogComponent
+    ProductReadComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    FormsModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,43 +1,56 @@
 <div class="products">
-    <h1>meus produtos.</h1>
-    <span></span>
-    <!-- Button trigger modal -->
-<button type="button" class="btn button-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <h1>meus produtos.</h1>
+  <span></span>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn button-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Adicionar Produto
   </button>
-  
+
   <!-- Modal -->
-  <div class="modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" >
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Novo produto.</h5>
+          <h5 class="modal-title" id="modal">Novo produto.</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Nome" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" placeholder="Descrição" style="height: 88px" id="floatingTextarea"></textarea>
-                </div>
-                <div class="mb-3">
-                    <input placeholder="Preço" class="form-control float-start" style="width: 256px;" type="number" min="1" step="any" />
-                    <input class="form-control mb-3 float-end" style="width: 256px;" type="number" min="1" step="any" />
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Categorias ( separe-as por vírgulas )" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <input class="form-control" style="height: 150px;" type="file" id="formFile">
-                  </div>
-              </form>
+          <form>
+            <div class="mb-4 mt-2 form-floating">
+              <input [(ngModel)]="product.name" name="name" type="text" class="form-control" placeholder="Nome"
+                id="floatingInput">
+              <label for="name">Nome</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <textarea [(ngModel)]="product.description" name="description" class="form-control"
+                placeholder="Descrição" style="height: 88px" id="modal-description"></textarea>
+              <label for="modal-description">Descrição</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <input id="price" [(ngModel)]="product.price" name="price" placeholder="Preço"
+                class="form-control float-start" style="width: 256px;" type="number" min="1" step="any" />
+              <label for="price">Preço</label>
+              <div class="mb-4">
+                <input [(ngModel)]="product.date" name="date" type="date" class="form-control" style="width: 256px;"
+                  id="date">
+              </div>
+            </div>
+            <div class="mb-4 form-floating">
+              <input [(ngModel)]="product.categories" name="categories" type="text" class="form-control"
+                placeholder="Categorias ( separe-as por vírgulas )" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+              <label for="categories">Categorias</label>
+            </div>
+            <div class="mb-4">
+              <input class="form-control" [(ngModel)]="product.image" name="image" style="height: 150px;" type="file"
+                id="formFile">
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" data-bs-dismiss="modal" (click)="createProduct()"class="btn btn-create">Salvar</button>
-        </div> 
+          <button type="button" data-bs-dismiss="modal" (click)="createProduct()" class="btn btn-create">Salvar</button>
+        </div>
       </div>
     </div>
   </div>

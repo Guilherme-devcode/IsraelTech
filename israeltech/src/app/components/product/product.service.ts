@@ -1,15 +1,18 @@
-import { MatDialog } from '@angular/material/dialog';
+import { Product } from './product.model';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar'
-import { ProductsCreateComponent } from './products-create/products-create.component';
 import { ProductsComponent } from 'src/app/views/products/products.component';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private snackBar: MatSnackBar, private dialog: MatDialog) { }
+  baseUrl = "http://localhost:3001/products"
+
+  constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
     showMessage(msg: string):void{
       this.snackBar.open(msg, '',{
@@ -20,10 +23,7 @@ export class ProductService {
       })
     }
 
-    openDialog(): void{
-      const dialogRef = this.dialog.open(ProductsComponent, {
-        width: '250px'
-      })
+    create(product: Product): Observable<Product>{
+      return this.http.post<Product>(this.baseUrl, product)
     }
-
 }
