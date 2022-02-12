@@ -2,64 +2,31 @@
   "products": [
     {
       "id": 1,
-      "name": "Macbook Pro 2021 16",
+      "name": "MacBook Air 256GB 2020",
       "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
       "categories": "informática",
-      "price": 10499
+      "price": 10.499
     },
     {
       "id": 2,
       "name": "MacBook Air 256GB 2020",
       "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
       "categories": "informática",
-      "price": 10499
+      "price": 10.499
     },
     {
       "id": 3,
       "name": "MacBook Pro 2021 16",
       "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
       "categories": "informática",
-      "price": 17499
+      "price": 17.499
     },
     {
-      "name": "",
-      "description": "",
-      "categories": "",
-      "price": 0,
-      "id": 4
-    },
-    {
-      "name": "teste",
-      "description": "2311231",
-      "categories": "jdsakdjaslkd",
-      "price": 23,
-      "id": 5
-    },
-    {
-      "name": "dsada",
-      "description": "dsadas",
-      "categories": "jdsakdjaslkd",
-      "price": 25.5,
-      "image": "C:\\fakepath\\Fotoram.io.png",
-      "id": 6
-    },
-    {
-      "name": "Teste",
-      "description": "teste",
-      "categories": "tecnologia",
-      "price": 25.5,
-      "image": "C:\\fakepath\\Fotoram.io.png",
-      "date": "2001-03-08",
-      "id": 7
-    },
-    {
-      "name": "Teste",
-      "description": "Teste",
-      "categories": "",
-      "price": 11.5,
-      "image": "",
-      "date": "2000-02-09",
-      "id": 8
+      "id": 4,
+      "name": "MacBook Pro 2021 16",
+      "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
+      "categories": "informática",
+      "price": 17.499
     }
   ]
 }
