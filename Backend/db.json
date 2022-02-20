@@ -1,32 +1,13 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "MacBook Air 256GB 2020",
-      "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
-      "categories": "informática",
-      "price": 10.499
-    },
-    {
-      "id": 2,
-      "name": "MacBook Air 256GB 2020",
-      "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
-      "categories": "informática",
-      "price": 10.499
-    },
-    {
-      "id": 3,
-      "name": "MacBook Pro 2021 16",
-      "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
-      "categories": "informática",
-      "price": 17.499
-    },
-    {
-      "id": 4,
-      "name": "MacBook Pro 2021 16",
-      "description": "MacBook Air com a melhor tecnologia do mercado, trazendo muita inovação e velocidade.",
-      "categories": "informática",
-      "price": 17.499
+      "name": "teste",
+      "description": "teste",
+      "categories": "teste",
+      "price": 55.55,
+      "imagem": null,
+      "date": "2002-04-08",
+      "id": 1
     }
   ]
 }

@@ -1,5 +1,6 @@
 .products {
     margin-bottom: 30px;
+    width: 100%;
     h1 {
         font-size: 32px;
         text-transform: capitalize;
@@ -8,19 +9,12 @@
         color: #1F1F1F;
         font-weight: bold;
     }
-
-    span {
-        position: absolute;
-        margin-left: 50px;
-        margin-top: 10px;
-        border: 1px solid #CCCCCC;
-        width: 1235px;
-        background: red;
-
+    hr {
+        margin-right: 3rem;
+        margin-left: 3rem;
+        height: 2px;
     }
-
     .button-create {
-        background: red;
         position: absolute;
         right: 80px;
         top: 0;
@@ -39,6 +33,7 @@
     .btn:focus {
         box-shadow: none;
     }
+    
 }
 
 // Modal 
@@ -104,5 +99,23 @@ $form-floating-label-transform:   scale(0.75) translateY(-1.7rem) translateX(0.6
         left: 30px;
         height: 60px;
     }
+
+    
 }
+
+@media (max-width: 975px) {
+    .products {
+      h1{
+        margin-top: 60px;
+      }
+      .button-create {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 10rem;
+        justify-content: center;
+      }
+    }
+  }
 

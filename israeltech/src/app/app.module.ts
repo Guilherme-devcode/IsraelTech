@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxDropzoneModule } from 'ngx-dropzone';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/template/header/header.component';
@@ -13,9 +13,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms'
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/products-delete/products-delete.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AcessoComponent } from './acesso/acesso.component';
+import { BannerComponent } from './acesso/banner/banner.component';
+import { LoginComponent } from './acesso/login/login.component';
+import { CadastroComponent } from './acesso/cadastro/cadastro.component';
+import { AutenticacaoGuard } from './autenticacao-guard.service';
+import { Autenticacao } from './acesso/autenticacao.service';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -27,6 +42,12 @@ import { ProductReadComponent } from './components/product/product-read/product-
     ForDirective,
     ProductsCreateComponent,
     ProductReadComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent,
+    AcessoComponent,
+    BannerComponent,
+    LoginComponent,
+    CadastroComponent,
     
   ],
   imports: [
@@ -37,9 +58,17 @@ import { ProductReadComponent } from './components/product/product-read/product-
     MatDialogModule,
     HttpClientModule,
     FormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatMenuModule,
+    MatCardModule,
+    RouterModule.forRoot(ROUTES),
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    NgxDropzoneModule,
+    MatChipsModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [Autenticacao, AutenticacaoGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

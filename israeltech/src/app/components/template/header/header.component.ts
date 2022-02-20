@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Autenticacao } from 'src/app/acesso/autenticacao.service';
+import * as firebase from 'firebase';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private autenticacao : Autenticacao) { }
+  Email: string | undefined
 
   ngOnInit(): void {
-  }
+    firebase.auth().onAuthStateChanged((user) => {
 
+    })
+    firebase.auth().onAuthStateChanged((user)=>{
+      this.Email = user?.email
+    })
+  }
+  public sair(): void{
+    this.autenticacao.sair()
+  }
 }

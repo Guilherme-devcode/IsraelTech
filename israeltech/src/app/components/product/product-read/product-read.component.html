@@ -1,17 +1,26 @@
-<div  class="container">
-    <div class="row">
-        <div *ngFor="let product of products" class="col-2 card-grid">
+<div class="container container-fluid d-flex flex-wrap">
+    <div class="row" *ngFor="let product of products">
+        <div class="col-4 card-grid">
             <div class="card">
-                <img src="./assets/notebook.png" alt="">
-                <a href="#"><i class="bi bi-three-dots-vertical"></i></a>
+                <img src="./assets/notebook.png" alt="notebook">
+                <button mat-button data-bs-toggle="modal" data-bs-target="#test" [matMenuTriggerFor]="beforeMenu" href="#"><i class="bi bi-three-dots-vertical"></i></button>
+                <mat-menu #beforeMenu="matMenu">
+                    <button data-bs-toggle="modal" data-bs-target="#test" routerLink="/products/update/{{product.id}}" mat-menu-item><i style="color: #725172;" class="bi bi-pencil-square"></i> Editar</button>
+                    <button mat-menu-item routerLink="/products/delete/{{product.id}}" ><i style="color: #BA1414;" class="bi bi-trash3-fill"></i> Deletar</button>
+                  </mat-menu>
                 <h2 class="card-title">{{product.name}}</h2>
                 <p>{{product.description}}</p>
                 <span>R$ {{product.price}}</span>
-                <h4 class="chips">Tecnologia</h4>
+                <h4 class="chips">tecnologia</h4>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+
 
 
 

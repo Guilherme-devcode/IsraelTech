@@ -1,0 +1,70 @@
+$form-floating-label-transform: scale(0.75) translateY(-1.7rem)
+  translateX(0.6rem);
+
+  form {
+    .buttons{
+      position: relative;
+      left: 19rem;
+      top: -4rem;
+      button{
+        margin-left: 20px;
+      }
+    }
+    .btn-create {
+      color: #ffffff;
+      background: #725172;
+      width: 100px;
+      height: 44px;
+      transition: 0.25s;
+    }
+    .btn-create:hover {
+      background: #533c53;
+    }
+    .btn:focus {
+      box-shadow: none;
+    }
+
+    .btn-cancel {
+      border: 1px solid #725172;
+      width: 100px;
+      height: 44px;
+      color: #725172;
+      margin-left: 20px;
+      transition: 0.25s ease;
+    }
+    .btn-cancel:hover {
+      background: #725172;
+      color: white;
+    }
+    input, textarea{
+      border: 1px solid #848484;
+  }
+  input:focus, textarea:focus{
+      box-shadow: none;   
+  }
+  input::placeholder, textarea::placeholder{
+      opacity: 0;
+  }
+  input:focus + label{
+      background: white;
+      opacity: 1;
+      color: #626262;
+  }
+  textarea:focus + label{
+      background: white;
+      height: 10px;
+      opacity: 1;
+      color: #626262;
+  }
+  }
+
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}

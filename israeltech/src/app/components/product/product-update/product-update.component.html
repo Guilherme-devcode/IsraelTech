@@ -1,0 +1,82 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Editar Produto.</h3>
+            <form>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input [(ngModel)]="product.name" name="name" type="text" class="form-control" placeholder="Nome"
+                      id="floatingInput">
+                    <label class="form-label" for="firstName">Nome</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input [(ngModel)]="product.date" name="date" type="date" class="form-control" style="width: 256px;"
+                      id="date"> <label class="form-label" for="firstName">Data de remessa</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input [(ngModel)]="product.categories" name="categories" type="text" class="form-control"
+                      id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="categories">Categorias</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+                  <input id="price" [(ngModel)]="product.price" name="price" placeholder="Preço"
+                    class="form-control float-start" style="width: 256px;" type="number" min="1" step="any" />
+                  <label for="price">Preço</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+                  <textarea [(ngModel)]="product.description" name="description" class="form-control"
+                    style="height: 150px" id="modal-description"></textarea>
+                  <label for="modal-description">Descrição</label>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <div class="mb-4">
+                      <ngx-dropzone style="height: 150px;" (change)="onSelect($event)">
+                        <ngx-dropzone-label>Arraste uma imagem ou <span style="padding: 10px;" class="btn btn-create ">Selecionar</span></ngx-dropzone-label>
+                        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                          <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                        </ngx-dropzone-preview>
+                      </ngx-dropzone>        
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="buttons mt-4 pt-2">
+                <button type="button" class="btn btn-cancel" (click)="cancel()"
+                  data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" data-bs-dismiss="modal" (click)="updateProduct()"
+                  class="btn btn-create">Salvar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

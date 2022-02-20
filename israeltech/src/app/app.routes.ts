@@ -6,14 +6,13 @@ import { ProductsComponent } from './views/products/products.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/products-delete/products-delete.component';
 import { AcessoComponent } from './acesso/acesso.component';
+import { AutenticacaoGuard } from './autenticacao-guard.service';
 
-
-const routes: Routes = [
-
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const ROUTES: Routes = [
+    {path: '', component: AcessoComponent},
+    {path: 'home', component:HomeComponent, canActivate:[AutenticacaoGuard]},
+    {path: 'products',component:ProductsComponent, canActivate:[AutenticacaoGuard]},
+    {path: 'products/create', component:ProductsCreateComponent, canActivate:[AutenticacaoGuard]},
+    {path: 'products/update/:id', component:ProductUpdateComponent, canActivate:[AutenticacaoGuard]},
+    { path: "products/delete/:id", component: ProductDeleteComponent, canActivate:[AutenticacaoGuard]}
+]

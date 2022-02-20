@@ -1,10 +1,60 @@
-
-
-
-<button (click)="createProduct()" class="btn btn-create">
-    Salvar
-</button>
-<button (click)="cancel()" class="btn btn-cancel">
-    Cancelar
-</button>
-
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal">Novo produto.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-4 mt-2 form-floating">
+              <input [(ngModel)]="product.name" name="name" type="text" class="form-control" placeholder="Nome"
+                id="floatingInput">
+              <label for="name">Nome</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <textarea [(ngModel)]="product.description" name="description" class="form-control"
+                placeholder="Descrição" style="height: 88px" id="modal-description"></textarea>
+              <label for="modal-description">Descrição</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <input id="price" [(ngModel)]="product.price" name="price" placeholder="Preço"
+                class="form-control float-start" style="width: 256px;" type="number" min="1" step="any" />
+              <label for="price">Preço</label>
+              <div class="mb-4">
+                <input [(ngModel)]="product.date" name="date" type="date" class="form-control" style="width: 256px;"
+                  id="date">
+              </div>
+            </div>
+            <div class="mb-4 form-floating">
+              <mat-chip-list style="background-color: white;"  #chipList aria-label="Fruit selection">
+                <mat-chip *ngFor="let tag of tags" (removed)="remove(tag)">
+                    {{tag.name}}
+                    <button matChipRemove>
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-chip>
+                <input  placeholder="  Categorias (separe-as por vírgulas)" [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)" style="height: 50px;" class="input-chip"
+                    formControlName="tag">
+            </mat-chip-list>
+              <!-- <label for="categories">Categorias</label> -->
+            </div>
+            <div class="mb-4">
+              <ngx-dropzone (change)="onSelect($event)">
+                <ngx-dropzone-label>Arraste uma imagem ou <span style="padding: 10px;" class="btn btn-create ">Selecionar</span></ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+              </ngx-dropzone>              
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" data-bs-dismiss="modal" (click)="createProduct()" class="btn btn-create">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>

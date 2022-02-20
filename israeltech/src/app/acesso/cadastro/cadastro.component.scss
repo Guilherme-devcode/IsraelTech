@@ -1,0 +1,90 @@
+$form-floating-label-transform: scale(0.75) translateY(-1.7rem)
+  translateX(0.6rem);
+
+.card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  width: 50%;
+  height: 100%;
+  .card-title {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    margin-top: 6 rem;
+    h2 {
+      margin-left: 5rem;
+    }
+  }
+  hr {
+    width: 30rem;
+    margin: auto;
+    position: relative;
+    bottom: 15px;
+  }
+  form {
+    margin: auto;
+    width: 30rem;
+
+    input {
+      border: 1px solid #848484;
+    }
+    input:focus {
+      box-shadow: none;
+    }
+    input::placeholder {
+      opacity: 0;
+    }
+    input:focus + label {
+      background: white;
+      opacity: 1;
+      color: #626262;
+      transform: $form-floating-label-transform;
+    }
+  }
+  button {
+    width: 100%;
+    height: 54px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #725172;
+    border: none;
+  }
+  .register {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      position: relative;
+      left: 5px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .card {
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+
+    .card-title {
+      position: relative;
+      margin: auto;
+      left: -80px;
+    }
+    hr {
+      display: none;
+    }
+    form {
+      width: 100%;
+    }
+    button {
+      margin-bottom: 10px;
+    }
+  }
+}

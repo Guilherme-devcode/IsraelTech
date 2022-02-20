@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Excluir Produto</h5>
+        <p class="card-text">Você realmente deseja excluir esse produto ?</p>
+        <input class="mb-3" matInput placeholder="Nome" [value]="product.name" name="name" disabled>
+        <input class="mb-3" matInput placeholder="Preço (R$)" [value]="product.price" name="price" disabled>
+        <input class="mb-3"  [value]="product.date" name="price" disabled>
+        <button class="btn btn-primary mb-3" mat-raised-button (click)="deleteProduct()">
+            Excluir
+        </button>
+        <button class="btn btn-danger" mat-raised-button (click)="cancel()">
+            Cancelar
+        </button>
+    </div>
+</div>

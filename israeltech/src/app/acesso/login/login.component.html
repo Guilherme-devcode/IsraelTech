@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        <h2>Entre.</h2>
+      </div>
+      <hr />
+      <form [formGroup]="formulario" (ngSubmit)="autenticar()">
+        <div class="mb-4 mt-2 form-floating">
+          <input formControlName="email" name="name" type="email" class="form-control" placeholder="Nome" id="floatingInput">
+          <label for="name">E-mail</label>
+        </div>
+        <div class="mb-4 mt-2 form-floating">
+          <input formControlName="senha" name="password" type="password" class="form-control" placeholder="Nome" id="floatingInput">
+          <label for="password">Senha</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm btn-block mb-3">Entrar</button>
+      </form>
+  
+      <!-- <p class="small text-danger text-center">O nome de usuário inserido não pertence a uma conta. Verifique seu nome de
+        usuário e tente novamente.</p> -->
+  
+      <div class="register">
+        <p class="card-text">
+          Não tem uma conta? <a href="#" (click)="exibirPainelCadastro()" class="link-info" style="text-decoration: none;">Cadastre-se</a>
+        </p>
+      </div>
+    </div>
+  </div>

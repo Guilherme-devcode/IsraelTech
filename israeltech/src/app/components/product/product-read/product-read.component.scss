@@ -1,77 +1,123 @@
+
 .container {
     margin: 0;
     margin-left: 0;
     max-width: 100%;
-    .card-grid{
-        margin: 10px 45px;
+    .card-grid {
+      position: relative;
+      left: 20px;
+      margin: 10px 15px;
     }
     .card {
-        padding: 30px;
-        width: 280px;
-        height: 452px;
-        box-shadow: 0px 2px 12px #65656529;
-        background: #FFFFFF;
-        border-radius: 20px;
+      padding: 30px;
+      width: 280px;
+      height: 452px;
+      box-shadow: 0px 2px 12px #65656529;
+      background: #ffffff;
+      border-radius: 20px;
     }
-    a{
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        top: 10px;
-        color: #C9C9C9;
-        font-size: 35px;
-        right: 10px;
-        position: absolute;
+    button {
+      border:none!important;
+      background-color: transparent!important;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      top: 10px;
+      color: #c9c9c9;
+      font-size: 35px;
+      right: -5px;
+      position: absolute;
     }
-
+  
     h2 {
-        margin-top: 10px;
-        color: #1F1F1F;
-        font-size: 18px;
-        font-weight: bold;
+      margin-top: 10px;
+      color: #1f1f1f;
+      font-size: 18px;
+      font-weight: bold;
     }
-    
-    p{
-        text-align: inherit;
-        font-size: 15px;
+  
+    p {
+      text-align: inherit;
+      font-size: 15px;
+      width: 100%;
+    }
+  
+    span {
+      color: #1f1f1f;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    span::after {
+      content: "";
+      height: 1px;
+      background: #c9c9c9;
+      position: absolute;
+      margin-top: 15px;
+      align-items: center;
+      display: flex;
+      width: 150px;
+    }
+    img {
+      max-width: 300px;
+      height: 200px;
+
+    }
+    .chips {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 30px;
+      font-size: 15px;
+      width: 100px;
+      padding: 10px;
+      border: 1px solid #725172;
+      border-radius: 30px;
+      color: #725172;
+      cursor: default;
+      transition: 0.25s ease;
+      text-align: center;
+    }
+    .chips:hover {
+      background: #725172;
+      color: white;
+    }
+  }
+  @media (max-width: 991px) {
+    .container{
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      width: 100%;
+      overflow: hidden;
+      .card-grid{
+        left: 0;
+        margin-top: 50px;
+        margin-left: 0;
         width: 100%;
+      }
+      .card{
+        width: 100%;
+      }
     }
+  }
 
-    span{
-        color: #1F1F1F;
-        font-weight: bold;
-        font-size: 20px;
+  
+@media(max-width:575px){
+  .container{
+    .card-grid{
+      margin-left: 0;
     }
-    span::after{
-        content: '';
-        height: 1px;
-        background: #C9C9C9;
-        position: absolute;
-        margin-top: 15px;
-        align-items: center;
-        display: flex;
-        width: 150px;
+    .card{
+      width: 400px;
     }
-    img{
-        max-width: 300px;
+  }
+}
+@media(max-width:375px){
+  .container{
+    .card-grid{
+      margin-left: 0;
     }
-    .chips{
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 30px;
-        font-size: 15px;
-        width: 100px;
-        padding: 10px;
-        border: 1px solid #725172;
-        border-radius: 30px;
-        color: #725172;
-        cursor: default;
-        transition: 0.25s ease;
-        text-align: center;
+    .card{
+      width: 350px;
     }
-    .chips:hover{
-        background: #725172;
-        color: white;
-
-    }
+  }
 }
