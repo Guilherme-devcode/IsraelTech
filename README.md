@@ -1,5 +1,45 @@
 # Teste Desenvolvedor Frontend Angular
 
+## Documentação
+
+#### Node.js
+* Node.js - <https://nodejs.org/en/>
+    * Documentação - <https://nodejs.org/en/docs/>
+
+#### Angular
+* Angular CLI - <https://angular.io/guide/setup-local>
+    * Documentação - <https://angular.io/docs>
+
+## Instalação
+
+Após a instalção das ferramentas acima, basta rodar os comandos em seu terminal
+
+### Backend
+
+* Atualização das dependências do node.js
+    * `$ npm install`
+* Iniciando aplicação
+    * `$ npx json-server --watch db.json --port 3001`
+* Aplicação ficará disponível na host 
+    * `http://localhost:3001/`
+* Parando aplicação
+    * `$ npm stop`
+
+### Frontend
+
+* Primeiramente verifique se o Angular CLI está instalado
+    * `$ ng version`
+    * Caso não esteja, basta instalá-lo 
+        * `$ npm install -g @angular/cli`
+* Atualização das dependências do angular.js
+    * `$ ng update`
+* Iniciando aplicação
+    * `$ ng serve`
+* Aplicação ficará disponível na host 
+    * `http://127.0.0.1:4200`
+
+
+
 * O candidato deve criar um projeto para cadastro de produtos usando Angular em sua última versão.
 * O prazo para entrega do projeto é dia 20/02.
 * O candidato deve enviar o link do repositório do projeto.
